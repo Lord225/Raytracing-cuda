@@ -1,4 +1,7 @@
-﻿
+﻿#include <iostream>
+#include <glm.hpp>
+#include <SDL3/SDL.h>
+#include <memory>
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 
@@ -36,6 +39,12 @@ int main()
         fprintf(stderr, "cudaDeviceReset failed!");
         return 1;
     }
+
+    // returns zero on success else non-zero
+    if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_EVENTS) != 0) {
+        printf("error initializing SDL: %s\n", SDL_GetError());
+    }
+    SDL_Window* win = SDL_CreateWindow("GAME", 1000, 1000, 0);
 
     return 0;
 }
