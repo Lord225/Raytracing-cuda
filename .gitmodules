@@ -1,0 +1,6 @@
+[submodule "Raytracing-cuda/SDL"]
+	path = Raytracing-cuda/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "Raytracing-cuda/GLM"]
+	path = Raytracing-cuda/GLM
+	url = https://github.com/g-truc/glm.git
